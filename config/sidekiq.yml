@@ -1,0 +1,6 @@
+:concurrency: 5
+
+:schedule:
+  course_fetcher_worker:
+    cron: '*/2 * * * *'
+    class: CourseFetcherWorker
