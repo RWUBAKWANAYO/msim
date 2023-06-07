@@ -6,7 +6,9 @@ class Api::V1::EnrollmentsController < ApplicationController
     if current_user.enrollments.exists?(course: course)
       render json: { message: 'Course already enrolled' }, status: :unprocessable_entity
     else
+
     enrollment = Enrollment.new(course: course,user:current_user, enrollment_date: Date.today)
+
     if enrollment.save
       render json: { message: 'Enrollment successful', enrollment: enrollment }, status: :created
     else
