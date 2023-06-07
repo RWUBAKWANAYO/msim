@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Enrollment, type: :model do
   subject do
-  course = Course.create(name: "Math", description: "Introduction to Calculus")
-  user = User.create(email: 'test@example.com', password: 'password');
-    Enrollment.create(user: user, course: course, enrollment_date: Date.today)
+    course = Course.create(name: 'Math', description: 'Introduction to Calculus')
+    user = User.create(email: 'test@example.com', password: 'password')
+    Enrollment.create(user:, course:, enrollment_date: Date.today)
   end
   before { subject.save }
   context 'associations' do
