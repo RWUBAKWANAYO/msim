@@ -52,3 +52,4 @@ gem 'jwt'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'sidekiq'
 gem 'sidekiq-cron'
+gem "capybara"
