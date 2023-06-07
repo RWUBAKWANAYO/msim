@@ -7,8 +7,7 @@ class User < ApplicationRecord
   has_many :enrollments
   has_many :courses, through: :enrollments
 
-
-    def get_user_enrollments
+  def get_user_enrollments
     enrollments.includes(:course)
   end
 end

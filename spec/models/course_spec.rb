@@ -1,8 +1,7 @@
 require 'rails_helper'
-
-RSpec.describe User, type: :model do
+RSpec.describe Course, type: :model do
   subject do
-    User.new(email: 'testuser@gmail.com', password: 'password')
+    Course.new(name: 'Math', description: 'Introduction to Calculus')
   end
   before { subject.save }
   context 'associations' do
@@ -15,20 +14,20 @@ RSpec.describe User, type: :model do
     it 'is valid with valid attributes' do
       expect(subject).to be_valid
     end
-    it 'is not valid without an email' do
-      subject.email = nil
+    it 'is not valid without a name' do
+      subject.name = nil
       expect(subject).to_not be_valid
     end
-    it 'is not valid without a password' do
-      subject.password = nil
+    it 'is not valid without a description' do
+      subject.description = nil
       expect(subject).to_not be_valid
     end
-    it 'is not valid with a duplicate email' do
-      user = User.new(email: 'testuser@gmail.com', password: 'password')
-      expect(user).to_not be_valid
+    it 'is not valid with a duplicate name' do
+      course = Course.new(name: 'Math', description: 'Introduction to Calculus')
+      expect(course).to_not be_valid
     end
-    it 'is not valid with a short password' do
-      subject.password = 'short'
+    it 'is not valid with a short description' do
+      subject.description = 'short'
       expect(subject).to_not be_valid
     end
   end

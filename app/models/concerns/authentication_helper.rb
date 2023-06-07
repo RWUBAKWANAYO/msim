@@ -1,4 +1,3 @@
-
 module AuthenticationHelper
   extend ActiveSupport::Concern
 
@@ -10,7 +9,7 @@ module AuthenticationHelper
 
   def authenticate_request
     header = request.headers['Authorization']
-    token = header.split(' ').last if header
+    token = header.split.last if header
 
     begin
       @decoded_token = JWT.decode(token, Rails.application.secrets.secret_key_base, true, algorithm: 'HS256')
