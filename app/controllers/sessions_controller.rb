@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
     end
   end
 
-def destroy
-  token = request.headers['Authorization'].split[1]
-  user = jwt_authentication
-  if user
-    render json: { message: 'User logged out successfully' }, status: :no_content
-  else
-    render json: { error: 'No user is currently logged in' }, status: :unprocessable_entity
+  def destroy
+    request.headers['Authorization'].split[1]
+    user = jwt_authentication
+    if user
+      render json: { message: 'User logged out successfully' }, status: :no_content
+    else
+      render json: { error: 'No user is currently logged in' }, status: :unprocessable_entity
+    end
   end
-end
 end

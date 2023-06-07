@@ -20,7 +20,7 @@ module JwtAuthentication
 
   def extract_jwt_token
     authorization_header = request.headers['Authorization']
-    token = authorization_header.split(' ').last if authorization_header.present?
+    token = authorization_header.split.last if authorization_header.present?
     token
   end
 
