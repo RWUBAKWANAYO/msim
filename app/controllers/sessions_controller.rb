@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
     if user
       render json: { message: 'User logged out successfully' }, status: :no_content
     else
- end
+      render json: { error: 'No user is currently logged in' }, status: :unprocessable_entity
+    end
   end
 end
