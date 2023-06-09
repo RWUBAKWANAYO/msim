@@ -14,7 +14,9 @@ class SessionsController < ApplicationController
   def destroy
     request.headers['Authorization'].split[1]
     user = jwt_authentication
-
+    if user
+      render json: { message: 'User logged out successfully' }, status: :no_content
+    else
  end
   end
 end
