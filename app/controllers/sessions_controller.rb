@@ -12,6 +12,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    request.headers['Authorization'].split[1]
 
+ end
   end
 end
