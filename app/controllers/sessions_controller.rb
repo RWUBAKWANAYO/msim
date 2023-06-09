@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
 
   def destroy
     request.headers['Authorization'].split[1]
+    user = jwt_authentication
 
  end
   end
