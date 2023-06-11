@@ -26,7 +26,6 @@ class CourseFetcherWorker
     rescue StandardError => e
       puts "Error: #{e.message}"
     end
-    CourseFetcherWorker.perform_in(30.seconds)
   end
 
   private

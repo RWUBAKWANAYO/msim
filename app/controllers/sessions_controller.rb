@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       token = generate_jwt_token(user)
-      render json: { token: token}, status: :ok
+      render json: { token: }, status: :ok
     else
       render json: { error: 'Invalid email or password' }, status: :unauthorized
     end
