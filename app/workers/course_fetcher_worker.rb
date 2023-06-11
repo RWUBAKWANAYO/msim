@@ -8,7 +8,7 @@ class CourseFetcherWorker
 
   def perform
     puts 'Performing CourseFetcherWorker job.......'
-
+    display_time
     begin
       uri = URI(API_ENDPOINT)
       http = Net::HTTP.new(uri.host, uri.port)
@@ -48,5 +48,13 @@ class CourseFetcherWorker
     else
       Course.create(id: course_id, name: title, description:)
     end
+  end
+
+  def display_time
+    duration = 2.minutes
+    future_time = Time.now + duration
+    formatted_time = future_time.strftime('%H:%M:%S')
+    puts formatted_time
+    puts '--------------------------------------------------------'
   end
 end
