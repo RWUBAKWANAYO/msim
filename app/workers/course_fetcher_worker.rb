@@ -50,5 +50,8 @@ class CourseFetcherWorker
     end
   end
 
+  def display_time
+    duration = 2.minutes
 
+  end
 end
