@@ -36,6 +36,10 @@ class CourseFetcherWorker
     end
   end
 
+  def process_course(course)
+
+
+    end
   end
 
 
