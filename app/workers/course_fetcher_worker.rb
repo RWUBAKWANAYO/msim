@@ -32,7 +32,7 @@ class CourseFetcherWorker
 
   def process_courses(courses)
     courses['data'].each do |course|
-
+      process_course(course)
     end
   end
 
