@@ -50,4 +50,7 @@ class CourseFetcherWorker
     end
   end
 
+  def display_time
+
+end
 end
