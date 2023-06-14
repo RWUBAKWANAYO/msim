@@ -3,5 +3,4 @@ class Api::V1::CoursesController < ApplicationController
     courses = Course.all
     render json: courses, only: %i[name description], status: :ok
   end
-
 end
