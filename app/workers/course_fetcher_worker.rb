@@ -43,7 +43,9 @@ class CourseFetcherWorker
 
     existing_course = Course.find_by(id: course_id)
 
-
+    if existing_course
+ else
+  end
   end
 
 
