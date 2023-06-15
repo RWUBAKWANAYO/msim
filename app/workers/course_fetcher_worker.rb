@@ -39,6 +39,7 @@ class CourseFetcherWorker
   def process_course(course)
     course_id = course['id']
     title = course['attributes']['title']
+    description = course['attributes']['description']
 
 
 
