@@ -53,6 +53,7 @@ class CourseFetcherWorker
   def display_time
     duration = 2.minutes
     future_time = Time.now + duration
+    formatted_time = future_time.strftime('%H:%M:%S')
 
 end
 end
