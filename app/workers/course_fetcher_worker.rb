@@ -52,5 +52,6 @@ class CourseFetcherWorker
 
   def display_time
 
- end
+    puts '--------------------------------------------------------'
+  end
 end
