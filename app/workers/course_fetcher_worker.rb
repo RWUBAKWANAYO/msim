@@ -52,6 +52,7 @@ class CourseFetcherWorker
 
   def display_time
     duration = 2.minutes
+    future_time = Time.now + duration
 
     puts '--------------------------------------------------------'
   end
