@@ -43,6 +43,9 @@ class CourseFetcherWorker
 
     existing_course = Course.find_by(id: course_id)
 
+    if existing_course
+      puts "Skipping existing course with ID #{course_id}"
+    else
 
     end
   end
