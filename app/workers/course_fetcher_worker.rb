@@ -38,23 +38,10 @@ class CourseFetcherWorker
 
   def process_course(course)
     course_id = course['id']
-    title = course['attributes']['title']
-    description = course['attributes']['description']
 
-    existing_course = Course.find_by(id: course_id)
 
-    if existing_course
-      puts "Skipping existing course with ID #{course_id}"
-    else
-      Course.create(id: course_id, name: title, description:)
     end
   end
 
-  def display_time
-    duration = 2.minutes
-    future_time = Time.now + duration
-    formatted_time = future_time.strftime('%H:%M:%S')
-    puts formatted_time
-    puts '--------------------------------------------------------'
-  end
+
 end
