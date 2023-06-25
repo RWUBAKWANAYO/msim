@@ -46,7 +46,7 @@ class CourseFetcherWorker
     if existing_course
       puts "Skipping existing course with ID #{course_id}"
     else
-
+      Course.create(id: course_id, name: title, description:)
     end
   end
 
