@@ -17,6 +17,8 @@ class CourseFetcherWorker
       request = Net::HTTP::Get.new(uri.path)
       request['Authorization'] = "Bearer #{API_KEY}"
 
+      response = http.request(request)
+
 
   end
 
