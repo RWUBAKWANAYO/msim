@@ -37,6 +37,7 @@ class CourseFetcherWorker
   end
 
   def process_course(course)
+    course_id = course['id']
 
   end
 
