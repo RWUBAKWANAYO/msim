@@ -12,6 +12,8 @@ class CourseFetcherWorker
     begin
       uri = URI(API_ENDPOINT)
       http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+
 
 
   end
