@@ -21,6 +21,7 @@ class CourseFetcherWorker
 
       raise "Failed to fetch courses: #{response.body}" unless response.code == '200'
 
+      courses = JSON.parse(response.body)
 
   end
 
