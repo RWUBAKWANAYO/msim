@@ -23,7 +23,9 @@ class CourseFetcherWorker
 
       courses = JSON.parse(response.body)
       process_courses(courses)
+    rescue StandardError => e
 
+    end
   end
 
 
