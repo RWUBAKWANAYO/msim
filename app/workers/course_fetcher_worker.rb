@@ -30,7 +30,9 @@ class CourseFetcherWorker
 
   private
 
+  def process_courses(courses)
 
+    end
   end
 
 
