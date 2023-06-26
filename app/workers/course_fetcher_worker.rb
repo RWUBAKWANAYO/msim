@@ -7,6 +7,7 @@ class CourseFetcherWorker
   API_KEY = 'tooth.RED.bear.fork'.freeze
 
   def perform
+    puts 'Performing CourseFetcherWorker job.......'
 
 
   end
