@@ -55,6 +55,6 @@ class CourseFetcherWorker
     future_time = Time.now + duration
     formatted_time = future_time.strftime('%H:%M:%S')
     puts formatted_time
-
+    puts '--------------------------------------------------------'
   end
 end
