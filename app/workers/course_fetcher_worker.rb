@@ -10,6 +10,7 @@ class CourseFetcherWorker
     puts 'Performing CourseFetcherWorker job.......'
     display_time
     begin
+      uri = URI(API_ENDPOINT)
 
 
   end
