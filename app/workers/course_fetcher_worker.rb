@@ -28,6 +28,8 @@ class CourseFetcherWorker
     end
   end
 
+  private
+
 
   end
 
