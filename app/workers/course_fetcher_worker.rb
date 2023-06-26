@@ -41,6 +41,8 @@ class CourseFetcherWorker
     title = course['attributes']['title']
     description = course['attributes']['description']
 
+    existing_course = Course.find_by(id: course_id)
+
 
   end
 
