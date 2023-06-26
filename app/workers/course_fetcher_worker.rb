@@ -11,6 +11,7 @@ class CourseFetcherWorker
     display_time
     begin
       uri = URI(API_ENDPOINT)
+      http = Net::HTTP.new(uri.host, uri.port)
 
 
   end
