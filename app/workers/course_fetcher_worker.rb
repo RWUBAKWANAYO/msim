@@ -8,6 +8,7 @@ class CourseFetcherWorker
 
   def perform
     puts 'Performing CourseFetcherWorker job.......'
+    display_time
 
 
   end
