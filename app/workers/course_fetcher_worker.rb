@@ -14,6 +14,7 @@ class CourseFetcherWorker
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
 
+      request = Net::HTTP::Get.new(uri.path)
 
 
   end
