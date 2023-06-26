@@ -19,6 +19,8 @@ class CourseFetcherWorker
 
       response = http.request(request)
 
+      raise "Failed to fetch courses: #{response.body}" unless response.code == '200'
+
 
   end
 
