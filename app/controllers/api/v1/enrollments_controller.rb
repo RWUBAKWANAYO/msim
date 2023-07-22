@@ -13,7 +13,7 @@ class Api::V1::EnrollmentsController < ApplicationController
         render json: { message: 'Enrollment successful', enrollment: }, status: :created
       else
         render json: { message: 'Failed to enroll', errors: enrollment.errors.full_messages },
-
+               status: :unprocessable_entity
       end
     end
   end
