@@ -10,6 +10,7 @@ class Api::V1::EnrollmentsController < ApplicationController
       enrollment = Enrollment.new(course:, user: current_user, enrollment_date: Date.today)
 
       if enrollment.save
+        render json: { message: 'Enrollment successful', enrollment: }, status: :created
 
     end
   end
