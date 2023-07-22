@@ -11,7 +11,9 @@ class Api::V1::EnrollmentsController < ApplicationController
 
       if enrollment.save
         render json: { message: 'Enrollment successful', enrollment: }, status: :created
+      else
 
+      end
     end
   end
 
