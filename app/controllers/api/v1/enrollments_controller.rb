@@ -19,6 +19,7 @@ class Api::V1::EnrollmentsController < ApplicationController
   end
 
   def index
+    enrollments = current_user.user_enrollments
 
   end
 end
