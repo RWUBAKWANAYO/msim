@@ -21,5 +21,6 @@ class Api::V1::EnrollmentsController < ApplicationController
   def index
     enrollments = current_user.user_enrollments
 
+    render json: { enrollments: }, status: :ok
   end
 end
